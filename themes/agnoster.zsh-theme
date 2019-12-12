@@ -39,6 +39,8 @@ case ${SOLARIZED_THEME:-dark} in
     *)     CURRENT_FG='black';;
 esac
 
+CURRENT_FG='white'
+
 # Special Powerline characters
 
 () {
@@ -250,4 +252,6 @@ build_prompt() {
   prompt_end
 }
 
-PROMPT='%{%f%b%k%}$(build_prompt) '
+# PROMPT='%{%f%b%k%}$(build_prompt) '
+PROMPT='%{%f%b%k%}$(build_prompt)$(printf "\n$ ")'
+
